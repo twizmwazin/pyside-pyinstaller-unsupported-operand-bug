@@ -34,3 +34,15 @@ pip install -r requirements.txt
 Then I can run `python script.py` and it works as expected.
 However, if I build a pyinstaller distribution with `pyinstaller script.py`, the resulting executable (`dist/script/script`) raises the above exception and exits without displaying anything.
 
+
+# Other things tried
+
+I tried the following arguments to `QKeySequence`, they had the same result:
+```
+Qt.AltModifier + Qt.Key_D
+Qt.Key_D | Qt.AltModifier
+Qt.ShiftModifier | Qt.Key_D
+```
+
+I tried downgrading to PySide6 6.3.2.
+This works, but obviously we would like to remain up to date.
